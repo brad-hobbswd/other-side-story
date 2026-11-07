@@ -35,6 +35,15 @@
     .intro h2 { max-width: 800px; margin: 13px auto 15px; font-size: clamp(34px,5vw,55px); line-height: 1.2; font-weight: 400; }
     .intro p { max-width: 700px; margin: auto; color: #d0cbc3; font-size: 16px; }
     main { padding-bottom: 75px; background: #292927; }
+    .book-feature { max-width:1060px; margin:0 auto; padding:38px 25px 12px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:30px; align-items:center; }
+    .book-cover-frame { padding:10px; background:#f7f4ed; border:1px solid rgba(180,154,118,.35); border-radius:5px; box-shadow:0 12px 28px rgba(0,0,0,.22); }
+    .book-cover-frame img { display:block; width:100%; height:auto; border-radius:2px; }
+    .about-panel { padding:27px 30px; border:1px solid rgba(180,154,118,.5); border-radius:5px; background:linear-gradient(135deg,#f4f0e7,#e4e2d5); color:#34352f; }
+    .about-panel .eyebrow { color:#81704f; }
+    .about-panel h3 { margin:8px 0 12px; color:#34352f; font-size:clamp(24px,3vw,32px); line-height:1.2; font-weight:400; }
+    .about-panel p { margin:0 0 17px; color:#55564d; font-size:16px; line-height:1.75; }
+    .about-panel a { display:inline-block; padding:11px 15px; border:1px solid #7b8067; color:#4c5743; font:9px var(--sans); letter-spacing:.14em; text-transform:uppercase; }
+    .about-panel a:hover,.about-panel a:focus-visible { background:#59634f; color:#fff; }
     .contents-wrap { max-width: 1060px; margin: auto; padding: 0 25px; }
     .part { padding-top: 55px; }
     .part-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 19px; }
@@ -75,7 +84,7 @@
       nav { min-height: 0; padding: 0 12px; gap: 0 19px; flex-wrap: wrap; }
       nav a { padding: 11px 0; font-size: 8px; letter-spacing: .1em; }
       .intro { padding: 62px 22px 45px; }
-      .contents-wrap { padding: 0 15px; } 
+      .contents-wrap { padding: 0 15px; }\n      .book-feature { padding:27px 15px 8px; grid-template-columns:minmax(0,1fr); gap:22px; }\n      .book-cover-frame { width:min(72%,260px); margin:0 auto; }\n      .about-panel { padding:22px 20px; }\n      .about-panel p { font-size:15px; } 
       .bookend { padding: 25px 15px 0; }
       .bookend-card { align-items:flex-start; flex-direction:column; padding:20px; }
       .bookend-link { margin-top:3px; }
