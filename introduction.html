@@ -38,6 +38,7 @@
     article { max-width: 760px; margin: 0 auto; }
     article p { margin: 0 0 1.35em; color: #e0dbd2; font-size: 17px; line-height: 1.95; }
     article p:last-child { margin-bottom: 0; }
+    article::after { content: ""; display: table; clear: both; }
     .chapter-opening { margin: 0 0 39px; padding: 0 0 28px; border-bottom: 1px solid rgba(180,154,118,.45); text-align: center; }
     .chapter-opening h3 { margin: 12px 0 0; color: #f0e7d9; font-size: clamp(25px,3.5vw,34px); font-weight: 400; }
     .closing-line { margin-top: 40px; padding: 27px 28px; border-left: 2px solid var(--bronze); background: rgba(255,255,255,.035); }
@@ -60,9 +61,8 @@
     .story-image figcaption {
       margin-top: 8px; color: #b9a991; font: italic 11px/1.6 var(--serif);
     }
-    .story-image.right { float: right; margin-left: 25px; }
-    .story-image.left { float: left; margin-right: 25px; }
-    .image-clear { clear: both; height: 1px; }
+    .story-image.right { float: right; margin: 8px 0 22px 25px; }
+    .story-image.left { float: left; margin: 8px 25px 22px 0; }
     @media (max-width:700px) {
       .masthead { padding: 23px 13px 19px; }
       nav { min-height: 0; padding: 0 12px; gap: 0 19px; flex-wrap: wrap; }
@@ -129,7 +129,6 @@
 
       <p>She answered, “That’s what we’re doing now.”</p>
 
-      <div class="image-clear" aria-hidden="true"></div>
 
       <p>And she was right.</p>
 
@@ -164,7 +163,6 @@
 
       <p>Sometimes the fear of failing in another relationship becomes so strong that a person begins examining everything. A change in tone, a delayed response, a missed expectation, or a moment that feels different can lead to questions that continue long after the moment has passed.</p>
 
-      <div class="image-clear" aria-hidden="true"></div>
 
       <p>Overthinking can become a way of searching for answers before there is enough information to understand what is actually happening. A person may begin trying to anticipate disappointment, protect themselves from rejection, or maintain control over situations because uncertainty feels frightening.</p>
 
@@ -199,7 +197,6 @@
 
       <p>It means being willing to look honestly at the whole situation.</p>
 
-      <div class="image-clear" aria-hidden="true"></div>
 
       <p>That car ride home left me thinking about how often we hear one side of a story and immediately form an opinion. We listen to what someone experienced, how it made them feel, and what they believe happened. We may never consider what the other person understood, what they intended, what they were struggling with, or what they might say if given the opportunity to explain.</p>
 
