@@ -51,6 +51,17 @@
     .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 25px; margin-bottom: 28px; }
     .footer-nav a { color: #c8c1b6; font: 9px var(--sans); letter-spacing: .13em; text-transform: uppercase; }
     .copyright { padding-top: 18px; border-top: 1px solid var(--line); color: #928c82; font: 10px/1.8 var(--sans); }
+    /* Square editorial images with alternating text wrap */
+    .story-image { width: 36%; max-width: 250px; margin: 8px 0 22px; }
+    .story-image img {
+      display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+      border: 1px solid rgba(180,154,118,.7); border-radius: 7px;
+    }
+    .story-image figcaption {
+      margin-top: 8px; color: #b9a991; font: italic 11px/1.6 var(--serif);
+    }
+    .story-image.right { float: right; margin-left: 25px; }
+    .story-image.left { float: left; margin-right: 25px; }
     @media (max-width:700px) {
       .masthead { padding: 23px 13px 19px; }
       nav { min-height: 0; padding: 0 12px; gap: 0 19px; flex-wrap: wrap; }
@@ -60,6 +71,11 @@
       article p { font-size: 16px; line-height: 1.85; margin-bottom: 1.25em; }
       .closing-line { padding: 22px 20px; }
       .page-navigation { margin-top: 38px; }
+      .story-image, .story-image.right, .story-image.left {
+        float: none; width: 100%; max-width: 300px; margin: 25px auto;
+      }
+      .story-image img { aspect-ratio: 1 / 1; }
+
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
   </style>
@@ -111,7 +127,17 @@
 
       <p>We were already talking. She did not need another invitation. She needed someone willing to listen.</p>
 
+<figure class="story-image right">
+        <img src="images/17CE6212-E529-4D32-8AAC-30DC2A11C7A9.png" alt="A brother listening to his sister during a car ride home" loading="lazy">
+        <figcaption>Sometimes the conversations that matter most happen unexpectedly.</figcaption>
+      </figure>
+
       <p>I knew that being around him often made it difficult for us to have certain conversations openly. The car had become a place where she could express herself without feeling that every word needed to be explained or defended. I was not there to interrogate her, determine who was right, or tell her what she should do with her relationship. I was her brother, listening to someone I love trying to make sense of something that mattered deeply to her.</p>
+
+<figure class="story-image left">
+        <img src="images/61F73EB6-E1C8-4F67-961F-A41AC3984DC9.png" alt="A woman reflecting while looking through a window" loading="lazy">
+        <figcaption>Some feelings are difficult to express until we feel safe enough to speak.</figcaption>
+      </figure>
 
       <p>As she spoke, I began thinking about how complicated relationships can become when two people are experiencing the same circumstances differently.</p>
 
@@ -126,6 +152,11 @@
       <p>That does not mean every disappointment can be explained by his circumstances. It does mean that understanding the situation requires looking beyond what is immediately visible.</p>
 
       <p>My sister had noticed differences in how he behaved at home and when they went out together. She had described moments when he seemed glued to his phone while they were at home, yet she also recognized that he made an effort to schedule activities around their work commitments. When she became overwhelmed at work, he was willing to help her, although sometimes she did not know how to respond to that willingness.</p>
+
+<figure class="story-image right">
+        <img src="images/CFF459C5-0838-4730-AE79-24BC1DBE353F.png" alt="A different couple sitting together while experiencing emotional distance" loading="lazy">
+        <figcaption>Two people can share a relationship and experience it differently.</figcaption>
+      </figure>
 
       <p>There was more than one thing happening at once. She could appreciate his efforts and still feel that something was missing. She could love him and still have questions. She could recognize the limitations they were living under and still want more connection, reassurance, or attention.</p>
 
