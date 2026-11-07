@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#343638">
+  <meta name="description" content="Explore all fifteen chapters of The Other Side of the Story by Bradley Hobbs.">
+  <meta name="author" content="Bradley Hobbs">
+  <title>Contents | The Other Side of the Story</title>
+  <style>
+    :root {
+      --ink: #292927;
+      --paper: #eee9df;
+      --paper-light: #f7f4ed;
+      --bronze: #b49a76;
+      --line: rgba(238,233,223,.2);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Arial, Helvetica, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body { margin: 0; color: var(--paper); background: #292927; font-family: var(--serif); line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+    .topline { padding: 9px 18px; text-align: center; color: #d7cfc2; background: #201f1d; font: 9px/1.5 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+    .masthead { padding: 29px 18px 25px; text-align: center; background: var(--paper-light); color: var(--ink); }
+    .author { color: #89785f; font: 10px var(--sans); letter-spacing: .3em; text-transform: uppercase; }
+    .masthead h1 { margin: 8px 0 2px; font-size: clamp(27px, 4.5vw, 42px); line-height: 1.2; font-weight: 400; letter-spacing: .03em; }
+    .masthead p { margin: 5px 0 0; color: #777064; font-size: 15px; font-style: italic; }
+    .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(35,34,32,.97); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    nav { max-width: 1100px; min-height: 55px; margin: auto; padding: 0 22px; display: flex; justify-content: center; align-items: center; gap: clamp(17px, 4vw, 42px); }
+    nav a { padding: 17px 0; color: #e4ded4; font: 9px var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+    nav a:hover, nav a:focus-visible, nav a[aria-current="page"] { color: var(--bronze); }
+    .intro { padding: 76px 22px 56px; text-align: center; background: linear-gradient(145deg,#292a2b,#3b3d3e); }
+    .eyebrow { color: #b9a17f; font: 10px/1.5 var(--sans); letter-spacing: .25em; text-transform: uppercase; }
+    .intro h2 { max-width: 800px; margin: 13px auto 15px; font-size: clamp(34px,5vw,55px); line-height: 1.2; font-weight: 400; }
+    .intro p { max-width: 700px; margin: auto; color: #d0cbc3; font-size: 16px; }
+    main { padding-bottom: 75px; background: #292927; }
+    .contents-wrap { max-width: 1060px; margin: auto; padding: 0 25px; }
+    .part { padding-top: 55px; }
+    .part-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 19px; }
+    .part-number { flex: 0 0 auto; display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid var(--part-accent); border-radius: 50%; color: var(--part-accent); font: 11px var(--sans); }
+    .part-heading h3 { margin: 0; color: var(--part-title); font-size: clamp(20px,3vw,26px); font-weight: 400; line-height: 1.25; }
+    .part-heading p { margin: 3px 0 0; color: var(--part-sub); font: 9px var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+    .chapter-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; }
+    .chapter-card { min-height: 142px; display: flex; gap: 13px; align-items: flex-start; padding: 20px 19px; border: 1px solid var(--part-border); border-top: 3px solid var(--part-accent); background: var(--part-card); transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .chapter-card:hover, .chapter-card:focus-visible { transform: translateY(-3px); background: var(--part-hover); border-color: var(--part-accent); outline: none; }
+    .chapter-number { flex: 0 0 31px; color: var(--part-accent); font: 11px var(--sans); letter-spacing: .08em; padding-top: 4px; }
+    .chapter-title { color: var(--part-title); font-size: clamp(16px,2vw,19px); line-height: 1.4; }
+    .chapter-link { display: inline-block; margin-top: 10px; color: var(--part-sub); font: 8px var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+    .chapter-card:hover .chapter-link { color: var(--part-accent); }
+    .stage-one { --part-accent:#aeb2b4; --part-title:#f0f0ee; --part-sub:#b7b9ba; --part-card:#333638; --part-hover:#3b3e40; --part-border:#505457; }
+    .stage-two { --part-accent:#c2ae98; --part-title:#f2e8dc; --part-sub:#c6b9ab; --part-card:#393735; --part-hover:#46413d; --part-border:#5c534a; }
+    .stage-three { --part-accent:#a9ae86; --part-title:#e8eadb; --part-sub:#bdc1a7; --part-card:#34392f; --part-hover:#41483a; --part-border:#535b49; }
+    .stage-four { --part-accent:#c9ad79; --part-title:#fff7e9; --part-sub:#d9c9ad; --part-card:#413d34; --part-hover:#50493b; --part-border:#675a43; }
+    .closing-note { max-width: 760px; margin: 65px auto 0; padding: 30px 28px; text-align: center; border-top: 1px solid rgba(180,154,118,.55); border-bottom: 1px solid rgba(180,154,118,.55); }
+    .closing-note p { margin: 0; color: #d0cbc3; font-size: 16px; }
+    footer { padding: 45px 20px 23px; text-align: center; background: #1f1e1c; }
+    .footer-title { font-size: 18px; letter-spacing: .12em; }
+    .tagline { margin: 7px 0 24px; color: var(--bronze); font-size: 14px; font-style: italic; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 25px; margin-bottom: 28px; }
+    .footer-nav a { color: #c8c1b6; font: 9px var(--sans); letter-spacing: .13em; text-transform: uppercase; }
+    .copyright { padding-top: 18px; border-top: 1px solid var(--line); color: #928c82; font: 10px/1.8 var(--sans); }
+    @media (max-width:700px) {
+      .masthead { padding: 23px 13px 19px; }
+      nav { min-height: 0; padding: 0 12px; gap: 0 19px; flex-wrap: wrap; }
+      nav a { padding: 11px 0; font-size: 8px; letter-spacing: .1em; }
+      .intro { padding: 62px 22px 45px; }
+      .contents-wrap { padding: 0 15px; }
+      .part { padding-top: 42px; }
+      .chapter-grid { gap: 9px; }
+      .chapter-card { min-height: 142px; padding: 15px 11px; gap: 7px; }
+      .chapter-number { flex-basis: 25px; font-size: 10px; }
+      .chapter-title { font-size: 15px; line-height: 1.35; }
+      .chapter-link { font-size: 7px; letter-spacing: .1em; }
+    }
+    @media (max-width:350px) {
+      .chapter-card { padding: 13px 8px; gap: 5px; }
+      .chapter-number { flex-basis: 22px; }
+      .chapter-title { font-size: 14px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <div class="topline">A thoughtful look at relationships, perspective, and understanding</div>
+  <header class="masthead">
+    <div class="author">Bradley Hobbs · Author</div>
+    <h1>The Other Side of the Story</h1>
+    <p>Sometimes understanding begins with listening.</p>
+  </header>
+  <div class="nav-wrap">
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="contents.html" aria-current="page">Contents</a>
+      <a href="about.html">About the Book</a>
+      <a href="introduction.html">Introduction</a>
+      <a href="author.html">Author</a>
+      <a href="reflections.html">Reflections</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <header class="intro">
+    <div class="eyebrow">The complete chapter guide</div>
+    <h2>A story told one chapter at a time.</h2>
+    <p>Every chapter moves the reader a little further, from the first feeling that something is wrong toward the harder work of listening, taking responsibility, and choosing what comes next. The colors shift along the way, reflecting that journey.</p>
+  </header>
+  <main>
+    <div class="contents-wrap">
+      <section class="part stage-one" aria-labelledby="part-one">
+        <div class="part-heading">
+          <div class="part-number">01</div>
+          <div><h3 id="part-one">When Things Feel Unsettled</h3><p>Chapters 1–4 · Confusion and tension</p></div>
+        </div>
+        <div class="chapter-grid">
+          <a class="chapter-card" href="chapter-01.html"><span class="chapter-number">01</span><span><span class="chapter-title">When Something Doesn't Feel Right</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-02.html"><span class="chapter-number">02</span><span><span class="chapter-title">The Things We Don't Say</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-03.html"><span class="chapter-number">03</span><span><span class="chapter-title">Loving Someone You Don't Understand</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-04.html"><span class="chapter-number">04</span><span><span class="chapter-title">When Conversations Become Arguments</span><span class="chapter-link">Read chapter</span></span></a>
+        </div>
+      </section>
+      <section class="part stage-two" aria-labelledby="part-two">
+        <div class="part-heading">
+          <div class="part-number">02</div>
+          <div><h3 id="part-two">The Space Between People</h3><p>Chapters 5–8 · Silence and reflection</p></div>
+        </div>
+        <div class="chapter-grid">
+          <a class="chapter-card" href="chapter-05.html"><span class="chapter-number">05</span><span><span class="chapter-title">The Silence Between Two People</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-06.html"><span class="chapter-number">06</span><span><span class="chapter-title">When Love Feels One Sided</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-07.html"><span class="chapter-number">07</span><span><span class="chapter-title">The Weight of Being Misunderstood</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-08.html"><span class="chapter-number">08</span><span><span class="chapter-title">What We Bring From Our Past</span><span class="chapter-link">Read chapter</span></span></a>
+        </div>
+      </section>
+      <section class="part stage-three" aria-labelledby="part-three">
+        <div class="part-heading">
+          <div class="part-number">03</div>
+          <div><h3 id="part-three">Seeing What We Could Not See Before</h3><p>Chapters 9–12 · Awareness and responsibility</p></div>
+        </div>
+        <div class="chapter-grid">
+          <a class="chapter-card" href="chapter-09.html"><span class="chapter-number">09</span><span><span class="chapter-title">When Defending Yourself Becomes a Habit</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-10.html"><span class="chapter-number">10</span><span><span class="chapter-title">The Things We Expect but Never Express</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-11.html"><span class="chapter-number">11</span><span><span class="chapter-title">Learning to Hear What Is Not Being Said</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-12.html"><span class="chapter-number">12</span><span><span class="chapter-title">When Both People Are Hurting</span><span class="chapter-link">Read chapter</span></span></a>
+        </div>
+      </section>
+      <section class="part stage-four" aria-labelledby="part-four">
+        <div class="part-heading">
+          <div class="part-number">04</div>
+          <div><h3 id="part-four">Choosing a Different Way Forward</h3><p>Chapters 13–15 · Understanding and change</p></div>
+        </div>
+        <div class="chapter-grid">
+          <a class="chapter-card" href="chapter-13.html"><span class="chapter-number">13</span><span><span class="chapter-title">The Courage to Take Responsibility</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-14.html"><span class="chapter-number">14</span><span><span class="chapter-title">Choosing Understanding Over Winning</span><span class="chapter-link">Read chapter</span></span></a>
+          <a class="chapter-card" href="chapter-15.html"><span class="chapter-number">15</span><span><span class="chapter-title">When Love Requires Change</span><span class="chapter-link">Read chapter</span></span></a>
+        </div>
+      </section>
+      <div class="closing-note">
+        <p>The goal is not to decide whose version deserves to be heard. It is to become willing to listen carefully enough to understand the fuller story, including the parts that ask something of us.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-title">THE OTHER SIDE OF THE STORY</div>
+    <div class="tagline">Sometimes understanding begins with listening.</div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About the Book</a><a href="introduction.html">Introduction</a><a href="author.html">Author</a><a href="reflections.html">Reflections</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="copyright">© 2026 Bradley Hobbs. All rights reserved.<br>The Other Side of the Story</div>
+  </footer>
+</body>
+</html>
