@@ -81,15 +81,15 @@
       .bookend-link { margin-top:3px; }
       .part { padding-top: 42px; }
       .chapter-grid { gap: 9px; }
-      .chapter-card { min-height: 142px; padding: 15px 11px; gap: 7px; }
-      .chapter-number { flex-basis: 25px; font-size: 10px; }
-      .chapter-title { font-size: 15px; line-height: 1.35; }
-      .chapter-link { font-size: 7px; letter-spacing: .1em; }
+      .chapter-card { min-height: 158px; grid-template-columns: 23px minmax(0,1fr); column-gap: 7px; padding: 15px 11px 13px; }
+      .chapter-number { font-size: 9px; }
+      .chapter-title { font-size: 14px; line-height: 1.42; }
+      .chapter-link { margin-top: 11px; font-size: 7px; letter-spacing: .09em; }
     }
     @media (max-width:350px) {
-      .chapter-card { padding: 13px 8px; gap: 5px; }
-      .chapter-number { flex-basis: 22px; }
-      .chapter-title { font-size: 14px; }
+      .chapter-card { grid-template-columns: 19px minmax(0,1fr); padding: 12px 8px 11px; }
+      .chapter-number { font-size: 8px; }
+      .chapter-title { font-size: 13px; line-height: 1.38; }
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
   </style>
