@@ -35,15 +35,15 @@
     .intro h2 { max-width: 800px; margin: 13px auto 15px; font-size: clamp(34px,5vw,55px); line-height: 1.2; font-weight: 400; }
     .intro p { max-width: 700px; margin: auto; color: #d0cbc3; font-size: 16px; }
     main { padding-bottom: 75px; background: #292927; }
-    .book-feature { max-width:1060px; margin:0 auto; padding:38px 25px 12px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:30px; align-items:center; }
-    .book-cover-frame { padding:10px; background:#f7f4ed; border:1px solid rgba(180,154,118,.35); border-radius:5px; box-shadow:0 12px 28px rgba(0,0,0,.22); }
-    .book-cover-frame img { display:block; width:100%; height:auto; border-radius:2px; }
-    .about-panel { padding:27px 30px; border:1px solid rgba(180,154,118,.5); border-radius:5px; background:linear-gradient(135deg,#f4f0e7,#e4e2d5); color:#34352f; }
-    .about-panel .eyebrow { color:#81704f; }
-    .about-panel h3 { margin:8px 0 12px; color:#34352f; font-size:clamp(24px,3vw,32px); line-height:1.2; font-weight:400; }
-    .about-panel p { margin:0 0 17px; color:#55564d; font-size:16px; line-height:1.75; }
-    .about-panel a { display:inline-block; padding:11px 15px; border:1px solid #7b8067; color:#4c5743; font:9px var(--sans); letter-spacing:.14em; text-transform:uppercase; }
-    .about-panel a:hover,.about-panel a:focus-visible { background:#59634f; color:#fff; }
+    .book-feature{max-width:1060px;margin:0 auto;padding:38px 25px 12px;display:block}
+    .about-panel{display:flow-root;padding:27px 30px;border:1px solid rgba(180,154,118,.5);border-radius:5px;background:linear-gradient(135deg,#f4f0e7,#e4e2d5);color:#34352f}
+    .book-cover-frame{float:left;width:220px;max-width:38%;margin:0 30px 18px 0;padding:10px;background:#f7f4ed;border:1px solid rgba(180,154,118,.35);border-radius:5px;box-shadow:0 12px 28px rgba(0,0,0,.22)}
+    .book-cover-frame img{display:block;width:100%;height:auto;border-radius:2px}
+    .about-panel .eyebrow{color:#81704f}
+    .about-panel h3{margin:8px 0 12px;color:#34352f;font-size:clamp(24px,3vw,32px);line-height:1.2;font-weight:400}
+    .about-panel p{margin:0 0 17px;color:#55564d;font-size:16px;line-height:1.75}
+    .about-panel a{display:inline-block;padding:11px 15px;border:1px solid #7b8067;color:#4c5743;font:9px var(--sans);letter-spacing:.14em;text-transform:uppercase}
+    .about-panel a:hover,.about-panel a:focus-visible{background:#59634f;color:#fff}
     .contents-wrap { max-width: 1060px; margin: auto; padding: 0 25px; }
     .part { padding-top: 55px; }
     .part-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 19px; }
@@ -132,8 +132,8 @@
   </header>
   <main>
     <section class="book-feature" aria-label="Book cover and About the Book">
-      <div class="book-cover-frame"><img src="images/A99BB57F-BB81-4E99-8017-21BA52452D85.png" alt="There Is Another Side to the Story by Bradley Hobbs, book cover"></div>
       <div class="about-panel">
+        <div class="book-cover-frame"><img src="images/A99BB57F-BB81-4E99-8017-21BA52452D85.png" alt="There Is Another Side to the Story by Bradley Hobbs, book cover"></div>
         <div class="eyebrow">About the Book</div>
         <h3>Every Relationship Has More Than One Perspective.</h3>
         <p><em>There Is Another Side to the Story</em> explores how two people can experience the same relationship in very different ways. Through honest reflection and practical insight, it considers communication, expectations, misunderstandings, accountability, and the importance of listening beyond our own assumptions.</p>
