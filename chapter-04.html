@@ -48,7 +48,9 @@
     .image-clear { clear:both; height:1px; }
 
     @media(max-width:700px) {
-      .chapter-image,.chapter-image.left,.chapter-image.right { float:none; width:100%; max-width:240px; margin:22px auto; }
+      .chapter-image { float:right; width:38%; max-width:150px; margin:3px 0 10px 12px; }
+      .chapter-image.left { float:left; margin:3px 12px 10px 0; }
+      .section-heading { clear:both; }
       .image-clear { height:0; }
       .masthead { padding:23px 13px 19px; }
       nav { min-height:0; padding:0 12px; gap:0 19px; flex-wrap:wrap; }
@@ -60,7 +62,7 @@
       .page-navigation { margin-top:38px; }
     }
         @media(max-width:420px) {
-      .chapter-image,.chapter-image.left,.chapter-image.right { max-width:205px; }
+      .chapter-image,.chapter-image.left,.chapter-image.right { width:36%; max-width:125px; }
     }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
   </style>
