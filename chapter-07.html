@@ -40,7 +40,17 @@
     .footer-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:12px 25px; margin-bottom:28px; }
     .footer-nav a { color:#c8c1b6; font:9px var(--sans); letter-spacing:.13em; text-transform:uppercase; }
     .copyright { padding-top:18px; border-top:1px solid var(--line); color:#928c82; font:10px/1.8 var(--sans); }
+    .chapter-image { width:31%; max-width:230px; margin-top:3px; margin-bottom:8px; }
+    .chapter-image img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border:1px solid rgba(180,154,118,.65); border-radius:5px; box-shadow:0 10px 26px rgba(0,0,0,.24); }
+    .chapter-image.right { float:right; margin:3px 0 8px 10px; }
+    .chapter-image.left { float:left; margin:3px 10px 8px 0; }
+    .image-clear { clear:both; height:1px; }
+
     @media(max-width:700px) {
+      .chapter-image { float:right; width:38%; max-width:150px; margin:3px 0 10px 12px; }
+      .chapter-image.left { float:left; margin:3px 12px 10px 0; }
+      .section-heading { clear:both; }
+      .image-clear { height:0; }
       .masthead { padding:23px 13px 19px; }
       nav { min-height:0; padding:0 12px; gap:0 19px; flex-wrap:wrap; }
       nav a { padding:11px 0; font-size:8px; letter-spacing:.1em; }
@@ -49,6 +59,9 @@
       article p { font-size:16px; line-height:1.85; margin-bottom:1.2em; }
       .section-heading { margin-top:45px; }
       .page-navigation { margin-top:38px; }
+    }
+    @media(max-width:420px) {
+      .chapter-image,.chapter-image.left,.chapter-image.right { width:36%; max-width:125px; }
     }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
   </style>
@@ -92,6 +105,10 @@
 
       <p>Imagine telling someone that you need a little more attention in your relationship.</p>
 
+      <figure class="chapter-image right">
+        <img src="images/9621B3A5-63E1-4EC9-BCAB-476151111D6D.png" alt="A woman tries to explain her feelings while her partner listens with a guarded expression">
+      </figure>
+
       <p>You are not asking them to abandon their responsibilities, stop spending time with other people, or organize every moment of their day around you. You are simply trying to explain that you miss feeling connected and would like more meaningful time together.</p>
 
       <p>But the response comes back differently.</p>
@@ -122,6 +139,10 @@
 
       <p>There are moments when a person begins feeling that every action requires an explanation.</p>
 
+      <figure class="chapter-image left">
+        <img src="images/8A6EA751-D96F-4352-A91E-FD1815F73CF6.png" alt="A woman leans against her partner as he offers comfort during an emotionally difficult moment">
+      </figure>
+
       <p>They explain why they were quiet, why they needed time alone, why they responded a certain way, or why they made a particular decision. Even ordinary situations begin feeling like opportunities for another misunderstanding.</p>
 
       <p>Eventually, they may become tired of explaining.</p>
@@ -144,6 +165,10 @@
 
       <p>Sometimes the most painful part of being misunderstood is the feeling that someone has already decided who you are.</p>
 
+      <figure class="chapter-image right">
+        <img src="images/29355FF7-D6C9-476C-86FC-B4421FD17065.png" alt="A partner offers a gentle, reassuring touch while the other looks down, feeling overwhelmed">
+      </figure>
+
       <p>You may bring up a concern and immediately be described as difficult. You may express disappointment and be called ungrateful. You may ask for reassurance and be told that you are insecure or overly sensitive.</p>
 
       <p>Those descriptions can make it difficult to continue the conversation because they move the focus away from the issue and toward your character.</p>
@@ -165,6 +190,10 @@
       <h3 class="section-heading">When the Past Determines How Someone Sees You</h3>
 
       <p>One of the most difficult things about being in a relationship is realizing that someone may sometimes respond to you through the experiences they had with another person.</p>
+
+      <figure class="chapter-image left">
+        <img src="images/F7C1187B-9C02-446E-AEB0-DB8143F8FA38.png" alt="A couple sits together in a thoughtful conversation, reflecting on difficult feelings">
+      </figure>
 
       <p>A previous relationship may have involved dishonesty, betrayal, abandonment, emotional neglect, or repeated disappointment. Those experiences can influence what someone expects from a new relationship, even when the person standing beside them has not caused the original hurt.</p>
 
@@ -192,6 +221,10 @@
 
       <p>There is something else that can make misunderstandings especially difficult.</p>
 
+      <figure class="chapter-image right">
+        <img src="images/9D51AD59-8CEB-4D6B-9C7E-6367CF2284F0.png" alt="A couple works together to write down ways to listen, communicate, and move forward">
+      </figure>
+
       <p>A person may sincerely believe they have done nothing wrong because they never intended to cause hurt. They may feel that their intentions should settle the matter.</p>
 
       <p>But relationships are not experienced through intentions alone.</p>
@@ -218,6 +251,10 @@
 
       <p>It is easy to imagine that only one person in a disagreement feels unheard. But there are relationships in which both people are carrying that same frustration.</p>
 
+      <figure class="chapter-image left">
+        <img src="images/7FC1A4FA-BD61-47FA-92EA-B8A584BC6944.png" alt="A couple sits turned away from one another, showing the distance created by misunderstanding">
+      </figure>
+
       <p>One may feel that every attempt to explain a concern becomes an argument. The other may feel that every attempt to explain their intentions is dismissed as an excuse.</p>
 
       <p>One may believe they are constantly asking for more connection. The other may believe they are constantly being told that their efforts are insufficient.</p>
@@ -243,6 +280,10 @@
       <h3 class="section-heading">The Responsibility to Be Understood</h3>
 
       <p>While it is important to feel heard, we also have to recognize our responsibility in how we communicate.</p>
+
+      <figure class="chapter-image right">
+        <img src="images/5B4A3BC3-20CB-4864-9086-2EBAD2BDAB67.png" alt="A man reflects quietly beside a window with an open journal">
+      </figure>
 
       <p>Sometimes we assume that our emotions explain themselves. We expect someone to understand why we are upset because the situation seems obvious to us. We may become frustrated when they do not recognize the meaning behind our silence, tone, or behavior.</p>
 
@@ -303,6 +344,10 @@
       <h3 class="section-heading">The Weight We Carry When No One Understands</h3>
 
       <p>Being misunderstood can make a person feel alone even when they are not physically alone.</p>
+
+      <figure class="chapter-image left">
+        <img src="images/197787F8-4E75-4F91-B2F3-4435ED6B3BDB.png" alt="A couple sits together watching the sunset, finding comfort in one another">
+      </figure>
 
       <p>It can create frustration, self doubt, emotional exhaustion, and a growing reluctance to communicate. It can make ordinary conversations feel difficult because the person begins anticipating another disagreement before anything has even been said.</p>
 
