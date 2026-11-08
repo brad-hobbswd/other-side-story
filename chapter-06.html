@@ -52,14 +52,16 @@
       .page-intro { padding:53px 20px 43px; }
       .reading-area { padding:43px 21px 60px; }
       article p { font-size:16px; line-height:1.85; margin-bottom:1.2em; }
-      .section-heading { margin-top:45px; clear:both; }
-      .chapter-image { width:38%; max-width:150px; margin-top:4px; margin-bottom:12px; }
-      .chapter-image.right { margin-left:13px; }
-      .chapter-image.left { margin-right:13px; }
-      .page-navigation { margin-top:38px; }
+      .section-heading { margin-top:38px; clear:both; scroll-margin-top:125px; }
+      .chapter-image { width:32%; max-width:118px; margin-top:4px; margin-bottom:10px; }
+      .chapter-image.right { margin-left:11px; }
+      .chapter-image.left { margin-right:11px; }
+      .chapter-image img { width:100%; height:auto; }
+      .page-navigation { margin-top:34px; }
     }
     @media(max-width:420px) {
-      .chapter-image,.chapter-image.left,.chapter-image.right { width:36%; max-width:125px; }
+      .chapter-image,.chapter-image.left,.chapter-image.right { width:30%; max-width:100px; margin-bottom:9px; }
+      .section-heading { scroll-margin-top:125px; }
     }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
   </style>
