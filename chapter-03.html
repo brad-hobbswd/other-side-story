@@ -64,12 +64,14 @@
       .page-intro { padding: 53px 20px 43px; }
       .reading-area { padding: 43px 21px 60px; }
       article p { font-size: 16px; line-height: 1.85; margin-bottom: 1.2em; }
-      .story-image, .story-image.left { float: none; display: block; width: 100%; max-width: 240px; margin: 22px auto 24px; }
+      .story-image { float: right; display: block; width: 38%; max-width: 150px; margin: 5px 0 12px 14px; }
+      .story-image.left { float: left; margin: 5px 14px 12px 0; }
+      .section-heading { clear: both; }
       .section-heading { margin-top: 45px; }
       .page-navigation { margin-top: 38px; }
     }
         @media(max-width:420px) {
-      .story-image,.story-image.left,.story-image.right { max-width:205px; }
+      .story-image,.story-image.left,.story-image.right { width: 36%; max-width:125px; }
     }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
   </style>
