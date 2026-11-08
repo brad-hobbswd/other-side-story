@@ -61,12 +61,15 @@
       .page-intro { padding: 53px 20px 43px; }
       .reading-area { padding: 43px 21px 60px; }
       article p { font-size: 16px; line-height: 1.85; margin-bottom: 1.2em; }
-      .story-image { float: none; clear: both; width: 100%; max-width: 300px; margin: 24px auto; }
+      .story-image { float: none; clear: both; width: 100%; max-width: 240px; margin: 22px auto; }
       .story-image img { width: 100%; }
       .section-heading { margin-top: 45px; }
       .page-navigation { margin-top: 38px; }
     }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+        @media(max-width:420px) {
+      .story-image,.story-image.left,.story-image.right { max-width:205px; }
+    }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
   </style>
 </head>
 <body>
