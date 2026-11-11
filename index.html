@@ -112,7 +112,9 @@
       .closing { padding: 75px 23px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-  </style>
+  .mobile-menu-toggle{display:none}@media(max-width:700px){.nav-wrap{padding:0 14px}.mobile-menu-toggle{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;min-height:48px;padding:0 5px;border:0;background:transparent;color:#eee9df;font:10px/1 var(--sans,Arial,Helvetica,sans-serif);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}.mobile-menu-toggle .menu-icon{display:grid;gap:5px;width:21px}.mobile-menu-toggle .menu-icon span{display:block;width:21px;height:1.5px;background:#d9c49c;transition:transform .2s,opacity .2s}.nav-wrap.menu-open .mobile-menu-toggle .menu-icon span:first-child{transform:translateY(6.5px) rotate(45deg)}.nav-wrap.menu-open .mobile-menu-toggle .menu-icon span:nth-child(2){opacity:0}.nav-wrap.menu-open .mobile-menu-toggle .menu-icon span:last-child{transform:translateY(-6.5px) rotate(-45deg)}.nav-wrap nav{display:none;min-height:0;width:100%;padding:5px 4px 15px;flex-direction:column;align-items:stretch;gap:0}.nav-wrap.menu-open nav{display:flex}.nav-wrap nav a{display:block;padding:12px 5px;border-top:1px solid rgba(255,255,255,.09);font-size:10px;letter-spacing:.14em;text-align:left}}
+.button{background:#59634f;border:1px solid #59634f;color:#fffaf0;padding:13px 26px;font-weight:600}.button:hover,.button:focus-visible{background:#b49a76;border-color:#b49a76;color:#292927}@media(max-width:700px){.button{min-width:190px;text-align:center;margin-left:0!important;margin-right:8px;margin-top:22px;padding:13px 19px;font-size:10px}}
+</style>
 </head>
 <body>
   <div class="topline">A thoughtful look at relationships, perspective, and understanding</div>
@@ -124,7 +126,8 @@
   </header>
 
   <div class="nav-wrap">
-    <nav aria-label="Main navigation">
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span>Menu</span><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+<nav id="site-navigation" aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="contents.html">Contents</a>
       <a href="about.html">About the Book</a>
@@ -259,5 +262,6 @@
     </div>
     <div class="copyright">© 2026 Bradley Hobbs. All rights reserved.<br>The Other Side of the Story</div>
   </footer>
+<script>(function(){const wrap=document.querySelector('.nav-wrap');const toggle=wrap&&wrap.querySelector('.mobile-menu-toggle');const nav=wrap&&wrap.querySelector('nav');if(!wrap||!toggle||!nav)return;function closeMenu(){wrap.classList.remove('menu-open');toggle.setAttribute('aria-expanded','false')}toggle.addEventListener('click',function(){const open=wrap.classList.toggle('menu-open');toggle.setAttribute('aria-expanded',String(open))});nav.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu()});document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu()})})();</script>
 </body>
 </html>
