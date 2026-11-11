@@ -61,7 +61,42 @@
       .story-image,.story-image.left,.story-image.right { max-width:205px; }
     }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
-  </style>
+  
+/* Accessible compact mobile navigation */
+.mobile-menu-toggle{display:none}
+@media(max-width:700px){
+  .nav-wrap{padding:0 14px}
+  .mobile-menu-toggle{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;min-height:48px;padding:0 5px;border:0;background:transparent;color:#eee9df;font:10px/1 var(--sans,Arial,Helvetica,sans-serif);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+  .mobile-menu-toggle .menu-icon{display:grid;gap:5px;width:21px}
+  .mobile-menu-toggle .menu-icon span{display:block;width:21px;height:1.5px;background:#d9c49c;transition:transform .2s,opacity .2s}
+  .nav-wrap.menu-open .mobile-menu-toggle .menu-icon span:first-child{transform:translateY(6.5px) rotate(45deg)}
+  .nav-wrap.menu-open .mobile-menu-toggle .menu-icon span:nth-child(2){opacity:0}
+  .nav-wrap.menu-open .mobile-menu-toggle .menu-icon span:last-child{transform:translateY(-6.5px) rotate(-45deg)}
+  .nav-wrap nav{display:none;min-height:0;width:100%;padding:5px 4px 15px;flex-direction:column;align-items:stretch;gap:0}
+  .nav-wrap.menu-open nav{display:flex}
+  .nav-wrap nav a{display:block;padding:12px 5px;border-top:1px solid rgba(255,255,255,.09);font-size:10px;letter-spacing:.14em;text-align:left}
+}
+
+
+/* Slightly larger editorial images with true paragraph wrapping */
+.story-image{width:40%;max-width:280px}
+.story-image.left{float:left;clear:left;margin:8px 22px 17px 0}
+.story-image.right{float:right;clear:right;margin:8px 0 17px 22px}
+.chapter-image{width:40%;max-width:280px}
+.chapter-image.left{float:left;clear:left;margin:8px 22px 17px 0}
+.chapter-image.right{float:right;clear:right;margin:8px 0 17px 22px}
+@media(max-width:700px){
+  .story-image,.chapter-image{width:44%;max-width:185px;margin-top:7px;margin-bottom:13px}
+  .story-image.left,.chapter-image.left{float:left;clear:left;margin-right:14px}
+  .story-image.right,.chapter-image.right{float:right;clear:right;margin-left:14px}
+}
+@media(max-width:420px){
+  .story-image,.chapter-image{width:43%;max-width:158px}
+  .story-image.left,.chapter-image.left{margin-right:11px}
+  .story-image.right,.chapter-image.right{margin-left:11px}
+}
+
+</style>
 </head>
 <body>
   <div class="topline">A thoughtful look at relationships, perspective, and understanding</div>
@@ -71,7 +106,8 @@
     <p>Sometimes understanding begins with listening.</p>
   </header>
   <div class="nav-wrap">
-    <nav aria-label="Main navigation">
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span>Menu</span><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+    <nav id="site-navigation" aria-label="Main navigation">
       <a href="index.html">Home</a><a href="contents.html">Contents</a><a href="about.html">About the Book</a><a href="introduction.html">Introduction</a><a href="author.html">Author</a><a href="reflections.html">Reflections</a><a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -342,5 +378,24 @@
     <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="copyright.html">Copyright</a></div>
     <div class="copyright">© 2026 Bradley Hobbs. All rights reserved.<br>The Other Side of the Story</div>
   </footer>
+
+<script>
+(function(){
+  const wrap=document.querySelector('.nav-wrap');
+  const toggle=wrap&&wrap.querySelector('.mobile-menu-toggle');
+  const nav=wrap&&wrap.querySelector('nav');
+  if(!wrap||!toggle||!nav)return;
+  function closeMenu(){wrap.classList.remove('menu-open');toggle.setAttribute('aria-expanded','false');}
+  toggle.addEventListener('click',function(){
+    const open=wrap.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded',String(open));
+  });
+  nav.addEventListener('click',function(event){
+    if(event.target.closest('a'))closeMenu();
+  });
+  document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});
+})();
+</script>
+
 </body>
 </html>
