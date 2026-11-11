@@ -41,6 +41,20 @@
     article::after { content: ""; display: table; clear: both; }
     .chapter-opening { margin: 0 0 39px; padding: 0 0 28px; border-bottom: 1px solid rgba(180,154,118,.45); text-align: center; }
     .chapter-opening h3 { margin: 12px 0 0; color: #f0e7d9; font-size: clamp(25px,3.5vw,34px); font-weight: 400; }
+    .origin-card {
+      max-width: 650px; margin: 0 auto 38px; padding: 25px 30px 27px;
+      text-align: center; background: linear-gradient(135deg,rgba(180,154,118,.16),rgba(255,255,255,.045));
+      border: 1px solid rgba(180,154,118,.52); border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    }
+    .origin-card .origin-label {
+      margin-bottom: 9px; color: #b9a17f; font: 9px/1.5 var(--sans);
+      letter-spacing: .22em; text-transform: uppercase;
+    }
+    .origin-card p {
+      margin: 0; color: #f0e7d9; font-size: clamp(19px,2.5vw,23px);
+      line-height: 1.65; font-style: italic;
+    }
     .closing-line { margin-top: 40px; padding: 27px 28px; border-left: 2px solid var(--bronze); background: rgba(255,255,255,.035); }
     .closing-line p { margin: 0; color: #eadcc7; font-size: 19px; font-style: italic; line-height: 1.75; }
     .page-navigation { max-width: 760px; margin: 52px auto 0; padding-top: 25px; border-top: 1px solid rgba(180,154,118,.35); display: flex; justify-content: space-between; align-items: center; gap: 15px; }
@@ -104,7 +118,10 @@
   </header>
   <main class="reading-area">
     <article>
-      <p>It all started from a car ride home. Well, to her house, after visiting Grandma.</p>
+      <div class="origin-card">
+        <div class="origin-label">Where the story began</div>
+        <p>It all started from a car ride home. Well, to her house, after visiting Grandma.</p>
+      </div>
 
       <p>It was not supposed to be a significant conversation. There was no plan to sit down and discuss relationships, emotions, expectations, or the difficulties that can come with loving someone. It was simply a ride home, the kind of ordinary moment that most people would forget by the time they reached their destination.</p>
 
