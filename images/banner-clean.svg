@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1536" height="864" viewBox="0 0 1536 864">
+     width="1536" height="864" viewBox="0 0 1536 864"
+     preserveAspectRatio="xMidYMid meet">
   <defs>
-    <clipPath id="bannerArtwork">
+    <clipPath id="artwork" clipPathUnits="userSpaceOnUse">
       <rect x="13" y="8" width="1510" height="823"/>
     </clipPath>
   </defs>
-  <image x="0" y="0" width="1536" height="864"
-         xlink:href="53B265EC-2493-42A5-AF92-2410152868F2.png"
-         clip-path="url(#bannerArtwork)"/>
+  <image href="53B265EC-2493-42A5-AF92-2410152868F2.png"
+         x="0" y="0" width="1536" height="864"
+         preserveAspectRatio="none"
+         clip-path="url(#artwork)"/>
 </svg>
